@@ -1,0 +1,7 @@
+# 150-300 word platform summary
+
+This submission audits a frozen copy of the UCI Iris dataset to determine whether it can support a bounded, testable descriptive question about species differences in petal measurements. The unit of analysis is one flower, the sample contains 150 flowers, and the recorded target is species. I froze the local CSV file and recorded its SHA-256 hash so that the exact dataset version can be reproduced.
+
+The audit checks schema consistency, numerical ranges, missingness, exact duplicates, anomaly flags, and leakage risk. In the frozen copy, there are no missing values and one exact duplicate row. The duplicate was retained because the dataset does not contain a unique specimen identifier proving that it is an erroneous record. All measurement variables were within plausible positive measurement ranges. Descriptively, petal measurements differ across the three recorded species, with setosa showing clear separation in petal size.
+
+The main claim boundary is external validity. This historical dataset does not provide enough collection detail to justify claims about all iris flowers worldwide, and equal class counts do not establish natural species prevalence. A causal statement such as “petal size causes species” is not supported because the dataset is observational and contains measurements of already-existing flowers. AI assistance was used for interpreting requirements and drafting the audit structure, while notebook execution, file hashing, duplicate inspection, and source/license verification were independently checked.
