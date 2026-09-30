@@ -1,0 +1,13 @@
+{
+  "n_rows": 150,
+  "n_columns": 5,
+  "sha256": "7e4e13e60d330d83ae5309b440eb5ececb4b779e925cc621d8f347b1e14eeca3",
+  "missing_total": 0,
+  "exact_duplicate_rows": 1,
+  "class_counts": {
+    "setosa": 50,
+    "versicolor": 50,
+    "virginica": 50
+  },
+  "seed": 20260928
+}
